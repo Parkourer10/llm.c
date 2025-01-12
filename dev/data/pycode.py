@@ -12,14 +12,14 @@ from data_common import write_datafile
 
 # ------------------------------------------
 
-parser = argparse.ArgumentParser(description="SlimPajama-6B dataset preprocessing")
+parser = argparse.ArgumentParser(description="starcoderdata (python) dataset preprocessing")
 parser.add_argument("-m", "--model_desc", type=str, default="gpt-2", help="Model descriptor, gpt-2|llama-3")
 parser.add_argument("-s", "--shard_size", type=int, default=10**8, help="Size of each data shard in the output .bin files, in tokens")
 args = parser.parse_args()
 
 # SlimPajama configuration
 local_dir = "python-code"  # Changed to 'python-code'
-remote_name = "pythoncode"  # Use the dataset's name
+remote_name = "default"  # Use the dataset's name
 
 # Create the cache the local directory if it doesn't exist yet
 DATA_CACHE_DIR = os.path.join(os.path.dirname(__file__), local_dir)

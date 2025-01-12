@@ -21,7 +21,7 @@ args = parser.parse_args()
 # SlimPajama has the 6B version available
 assert args.version == "6B", "version must be 6B"
 local_dir = "slimpajama6B"
-remote_name = "sample-6B"
+remote_name = "default"
 
 # Create the cache the local directory if it doesn't exist yet
 DATA_CACHE_DIR = os.path.join(os.path.dirname(__file__), local_dir)
